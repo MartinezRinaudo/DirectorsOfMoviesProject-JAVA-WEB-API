@@ -1,0 +1,30 @@
+package com.educacionit.jwa.backend.backend.jwa.models;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "directors")
+public class DirectorModel extends PersonModel {
+
+	private List<FilmModel> movies;
+
+	public DirectorModel() {
+	}
+
+	public DirectorModel(String id, String name, String lastname, List<FilmModel> movies) {
+		super(id, name, lastname);
+		this.movies = movies;
+	}
+
+	public List<FilmModel> getMovie() {
+		return movies;
+	}
+
+	public void setMovie(List<FilmModel> movies) {
+		this.movies = movies;
+	}
+
+}

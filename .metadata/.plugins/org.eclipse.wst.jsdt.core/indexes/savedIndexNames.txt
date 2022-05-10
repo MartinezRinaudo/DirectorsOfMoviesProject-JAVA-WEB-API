@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\Graciela\Desktop\PROYECTO JWA\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1156736056.index
+2530135681.index
+2040423340.index
+951545525.index
+3111589027.index
+1676824373.index

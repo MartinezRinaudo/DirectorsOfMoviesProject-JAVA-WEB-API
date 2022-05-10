@@ -1,0 +1,5 @@
+package com.educacionit.jwa.backend.backend.jwa.controllers;
+
+public class DirectorController {
+
+}

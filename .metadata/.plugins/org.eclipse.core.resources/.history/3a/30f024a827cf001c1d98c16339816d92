@@ -1,0 +1,38 @@
+package com.educacionit.jwa.backend.backend.jwa.models;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "directors")
+public class DirectorModel extends PersonModel {
+
+	private List<String> movies;
+	/*
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+	@JoinColumn(name = "productions")
+	private List<FilmModel> productions;
+	*/
+	
+	public DirectorModel() {
+	}
+
+	public DirectorModel(String name, String lastname, Integer id, List<String> movies) {
+		super(id, name, lastname);
+		this.movies = movies;
+	}
+
+	public List<String> getmovies() {
+		return movies;
+	}
+
+	public void setMovies(List<String> movies) {
+		this.movies = movies;
+	}
+
+}

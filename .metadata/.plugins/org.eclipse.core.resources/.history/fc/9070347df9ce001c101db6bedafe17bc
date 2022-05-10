@@ -1,0 +1,34 @@
+package com.educacionit.jwa.backend.backend.jwa.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.educacionit.jwa.backend.backend.jwa.models.DirectorModel;
+import com.educacionit.jwa.backend.backend.jwa.repositories.DirectorDAO;
+
+@Service
+public class DirectorService {
+
+	@Autowired
+	DirectorDAO directorDAO;
+
+	public List<DirectorModel> findDirectors() {
+		return (List<DirectorModel>) directorDAO.findAll();
+	}
+
+	public DirectorModel findDirector(String id) {
+		DirectorModel directorFound = directorDAO.findByid(id);
+		if (directorFound == null) {
+			throw new NotFoundException();
+		} else {
+			return directorFound;
+		}
+	}
+
+	public DirectorModel registerDirector(DirectorModel director) {
+		directorDAO.save(director);
+		return director;
+	}
+}
