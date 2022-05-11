@@ -1,0 +1,58 @@
+package com.educacionit.jwa.backend.backend.jwa.repositories;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.educacionit.jwa.backend.backend.jwa.models.DirectorModel;
+
+public class DirectorDTO {
+	private String name;
+	private String lastname;
+	private FilmDTO productions;
+	
+	public DirectorDTO() {
+		super();
+	}
+
+	public DirectorDTO(DirectorModel director) {
+		super();
+		this.name = director.getName();
+		this.lastname = director.getLastname();
+		director.getproductions().forEach(e -> {
+	
+			List<String> movies = new ArrayList<>();
+			List<String> genders = new ArrayList<>();
+			movies.add(e.getName());
+			genders.add(e.getGender());
+			this.productions = new FilmDTO(movies, genders);
+		});
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public FilmDTO getProductions() {
+		return productions;
+	}
+
+	public void setProductions(FilmDTO productions) {
+		this.productions = productions;
+	}
+
+	
+	
+	
+}

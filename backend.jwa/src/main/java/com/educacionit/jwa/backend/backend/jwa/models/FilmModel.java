@@ -34,6 +34,12 @@ public class FilmModel {
 		this.director = director;
 	}
 
+	public FilmModel(String name, String gender) {
+		super();
+		this.name = name;
+		this.gender = gender;
+	}
+	
 	@Override
 	public String toString() {
 		return "FilmModel [id=" + id + ", name=" + name + ", gender=" + gender + ", director=" + director + "]";

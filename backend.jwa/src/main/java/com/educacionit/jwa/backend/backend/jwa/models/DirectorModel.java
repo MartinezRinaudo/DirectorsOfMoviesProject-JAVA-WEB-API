@@ -12,8 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 @Entity
 @Table(name = "directors")
 public class DirectorModel extends PersonModel {
@@ -24,7 +22,6 @@ public class DirectorModel extends PersonModel {
 	private String lastname;
 	//private String movies;
 	
-	@JsonIgnore
 	@OneToMany(mappedBy = "director", cascade = CascadeType.ALL,fetch = FetchType.EAGER, orphanRemoval = true)
 	private List<FilmModel> productions = new ArrayList<>();
 	 

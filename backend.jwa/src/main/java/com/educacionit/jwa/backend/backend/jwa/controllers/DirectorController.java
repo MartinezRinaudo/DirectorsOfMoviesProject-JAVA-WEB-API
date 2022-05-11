@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.educacionit.jwa.backend.backend.jwa.models.DirectorModel;
+import com.educacionit.jwa.backend.backend.jwa.repositories.DirectorDTO;
 import com.educacionit.jwa.backend.backend.jwa.services.DirectorService;
 
 @RestController
@@ -23,17 +24,17 @@ public class DirectorController {
 	DirectorService directorServ;
 	
 	@GetMapping()
-	ResponseEntity<List<DirectorModel>>getDirectors() {
+	ResponseEntity<List<DirectorDTO>>getDirectors() {
 		return new ResponseEntity<>(directorServ.findDirectors(), HttpStatus.OK);
 	}
 	
 	@GetMapping(path = "/{id}" )
-	ResponseEntity<DirectorModel>getDirector(@PathVariable("id") Integer id) {
+	ResponseEntity<DirectorDTO>getDirector(@PathVariable("id") Integer id) {
 		return new ResponseEntity<>(directorServ.findDirector(id), HttpStatus.OK);
 	}
 	
 	@PostMapping()
-	ResponseEntity<DirectorModel>postDirector(@RequestBody DirectorModel director) {
+	ResponseEntity<DirectorDTO>postDirector(@RequestBody DirectorModel director) {
 		return new ResponseEntity<>(directorServ.registerDirector(director), HttpStatus.CREATED);
 	}
 	

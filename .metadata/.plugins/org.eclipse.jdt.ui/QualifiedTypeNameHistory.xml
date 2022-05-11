@@ -19,8 +19,6 @@
     <fullyQualifiedTypeName name="javax.persistence.DiscriminatorColumn"/>
     <fullyQualifiedTypeName name="javax.persistence.DiscriminatorValue"/>
     <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
-    <fullyQualifiedTypeName name="com.educacionit.jwa.backend.backend.jwa.models.DirectorModel"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
@@ -34,7 +32,10 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.educacionit.jwa.backend.backend.jwa.repositories.FilmDAO"/>
-    <fullyQualifiedTypeName name="com.educacionit.jwa.backend.backend.jwa.models.FilmModel"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnore"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.educacionit.jwa.backend.backend.jwa.models.DirectorModel"/>
+    <fullyQualifiedTypeName name="com.educacionit.jwa.backend.backend.jwa.models.FilmModel"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
