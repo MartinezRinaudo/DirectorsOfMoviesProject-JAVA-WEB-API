@@ -33,8 +33,6 @@ public class FilmModel {
 		this.gender = gender;
 		this.director = director;
 	}
-	
-	
 
 	@Override
 	public String toString() {

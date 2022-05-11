@@ -16,7 +16,7 @@ import com.educacionit.jwa.backend.backend.jwa.models.DirectorModel;
 import com.educacionit.jwa.backend.backend.jwa.services.DirectorService;
 
 @RestController
-@RequestMapping("API/directores")
+@RequestMapping("API/directors")
 public class DirectorController {
 
 	@Autowired
