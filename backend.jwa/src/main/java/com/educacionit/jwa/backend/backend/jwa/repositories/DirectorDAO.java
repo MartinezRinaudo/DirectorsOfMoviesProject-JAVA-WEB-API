@@ -7,6 +7,6 @@ import com.educacionit.jwa.backend.backend.jwa.models.DirectorModel;
 
 @Repository
 public interface DirectorDAO extends CrudRepository<DirectorModel, Integer>{
-	public DirectorModel findByid(Integer id);
+	//public DirectorModel findByid(Integer id);
 	
 }

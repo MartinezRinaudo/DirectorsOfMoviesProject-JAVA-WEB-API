@@ -1,0 +1,6 @@
+package com.educacionit.jwa.backend.backend.jwa.exceptions;
+
+public class NotFoundException extends GenericException {
+	
+
+}

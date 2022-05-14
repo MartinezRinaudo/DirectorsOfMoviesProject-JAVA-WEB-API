@@ -84,5 +84,4 @@ public class DirectorModel extends PersonModel {
 	public void setProductions(List<FilmModel> productions) {
 		this.productions = productions;
 	}
-
 }

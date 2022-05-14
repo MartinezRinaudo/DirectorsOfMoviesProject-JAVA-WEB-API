@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "productions")
 public class FilmModel {
@@ -19,6 +21,7 @@ public class FilmModel {
 	private String name;
 	private String gender;
 	
+	@JsonIgnore
 	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(name = "directorId")
 	private DirectorModel director;
