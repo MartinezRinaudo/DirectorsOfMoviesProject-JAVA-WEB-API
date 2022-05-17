@@ -1,8 +1,0 @@
-package com.educacionit.jwa.backend.backend.jwa.services;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
-public class DirectorService {
-	@Autowired
-	Perso
-}

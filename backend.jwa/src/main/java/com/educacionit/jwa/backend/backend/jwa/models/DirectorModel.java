@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "directors")
-public class DirectorModel extends PersonModel {
+public class DirectorModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;

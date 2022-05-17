@@ -1,0 +1,17 @@
+package com.educacionit.jwa.backend.backend.jwa.security;
+
+import java.util.function.Function;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class JWTTokenGeneration {
+	@Value("${JWT.secret}")
+	private String secret;
+	
+	public <T> T getClaimFromToken(String token, Function<Claims, T> claimResolve) {
+		final Claims claims = getAllClaimsFromToken(token);
+		return claimResolve.apply(claims);
+	}
+}

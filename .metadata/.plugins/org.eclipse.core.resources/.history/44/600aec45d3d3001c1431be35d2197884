@@ -1,0 +1,24 @@
+package com.educacionit.jwa.backend.backend.jwa.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.educacionit.jwa.backend.backend.jwa.models.LogInModel;
+import com.educacionit.jwa.backend.backend.jwa.repositories.LogInDAO;
+
+@Service
+public class LogInService {
+	
+	@Autowired
+	LogInDAO logInDAO;
+	
+	
+	public String enterTheApplication(LogInModel user) {
+		
+		LogInModel userDB = logInDAO.findByUserName(user.getUserName());
+		if(user.getUserName() == )
+		
+		return;
+	}
+	
+}

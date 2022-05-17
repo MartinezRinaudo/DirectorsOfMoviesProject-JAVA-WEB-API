@@ -1,0 +1,18 @@
+package com.educacionit.jwa.backend.backend.jwa.services;
+
+import org.springframework.stereotype.Service;
+
+import com.educacionit.jwa.backend.backend.jwa.models.LogInModel;
+
+@Service
+public class LogInService {
+	
+	public String enterTheApplication(LogInModel user) {
+		
+		LogInModel userDB = 
+		if(user.getUserName() == )
+		
+		return;
+	}
+	
+}
