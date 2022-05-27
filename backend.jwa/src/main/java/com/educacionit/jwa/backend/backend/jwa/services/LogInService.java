@@ -31,7 +31,7 @@ public class LogInService {
 			HttpServletResponse response = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes())
 					.getResponse();
 			response.sendError(HttpStatus.UNAUTHORIZED.value(), "Invalid Credentials");
-			return "";
+			return "Exception in course...";
 		}
 	}
 

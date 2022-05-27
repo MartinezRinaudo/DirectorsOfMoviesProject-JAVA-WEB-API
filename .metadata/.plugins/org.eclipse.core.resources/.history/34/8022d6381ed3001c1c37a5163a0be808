@@ -1,5 +1,0 @@
-package com.educacionit.jwa.backend.backend.jwa.exceptions;
-
-public class GenericException extends RuntimeException {
-
-}

@@ -50,33 +50,27 @@ public class DirectorService {
 			return director;
 		}
 	}
-	/*
-	 * public List<DirectorDTO> findDirectors() { List<DirectorModel> directors =
-	 * (List<DirectorModel>) directorDAO.findAll(); List<DirectorDTO> directorsDTO =
-	 * new ArrayList<>();
-	 * 
-	 * directors.forEach(e -> { DirectorDTO directorDTO = new DirectorDTO(e);
-	 * directorsDTO.add(directorDTO); });
-	 * 
-	 * return directorsDTO; }
-	 * 
-	 * public DirectorDTO findDirector(Integer id) {
-	 * 
-	 * DirectorModel directorFound = directorDAO.findByid(id);
-	 * 
-	 * DirectorDTO directorFoundDTO = new DirectorDTO(directorFound);
-	 * 
-	 * return directorFoundDTO; }
-	 * 
-	 * public DirectorDTO registerDirector(DirectorModel director) {
-	 * 
-	 * director.getproductions().forEach(e -> { e.setDirectors(director); });
-	 * 
-	 * directorDAO.save(director);
-	 * 
-	 * DirectorDTO directorRegistered = new DirectorDTO(director);
-	 * 
-	 * return directorRegistered; }
-	 */
+	
+	public DirectorModel updateDirector(DirectorModel director) {
+		var directorFound = directorDAO.findById(director.getId());
+		if(directorFound == null) {
+			throw new NotFoundException(ErrorEnum.INVALIDUSER);
+		} if(directorFound.equals(director)) {
+			throw new BadRequestException("This user already exist.", ErrorEnum.EXISTINGUSER);
+		} else {
+			directorDAO.save(director);
+			return director;
+		}
+	}
+	
+	public DirectorModel removeDirector(Integer id) {
+		var directorFound = directorDAO.findById(id);
+		if(directorFound == null) {
+			throw new NotFoundException(ErrorEnum.INVALIDUSER);
+		} else {
+			directorDAO.deleteById(id);
+			return null;
+		}
+	}
 
 }
